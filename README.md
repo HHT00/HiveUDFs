@@ -1,6 +1,6 @@
 HiveUDFs
 ========
-thh pull project
+ok
 My Personal Collection of Hive UDFs
 
 ## Compiling
