@@ -58,7 +58,7 @@ import org.apache.hadoop.io.Text;
  * (Please let me know if I need to modify the license)
  *
  * @author Petra Barus <petra.barus@gmail.com>
- * @see https://github.com/edwardcapriolo/hive-geoip
+ *
  */
 @UDFType(deterministic = true)
 @Description(

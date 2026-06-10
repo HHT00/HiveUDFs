@@ -45,7 +45,7 @@ import org.apache.hadoop.io.Text;
  * </pre>
  *
  * @author Petra Barus <petra.barus@gmail.com>
- * @see http://muhmahmed.blogspot.com/2009/02/java-ip-address-to-long.html
+ *
  */
 @UDFType(deterministic = true)
 @Description(

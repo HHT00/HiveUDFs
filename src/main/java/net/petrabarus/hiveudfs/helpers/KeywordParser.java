@@ -44,7 +44,7 @@ public class KeywordParser {
         /**
          * The URL in URL format.
          *
-         * @see URL.
+         *
          */
         private URL url;
         /**
