@@ -1,6 +1,5 @@
 package net.petrabarus.hiveudfs;
 
-import net.petrabarus.hiveudfs.helpers.InetAddrHelper;
 import net.petrabarus.hiveudfs.helpers.KeywordParser;
 import org.apache.hadoop.hive.ql.exec.Description;
 import org.apache.hadoop.hive.ql.exec.UDFArgumentException;
@@ -13,8 +12,8 @@ import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorConverters;
 import org.apache.hadoop.hive.serde2.objectinspector.PrimitiveObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
-import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
+
 
 /**
  * This is a UDF to get keyword part from a search engine referrer URL.
@@ -30,10 +29,10 @@ import org.apache.hadoop.io.Text;
 @UDFType(deterministic = true)
 @Description(
         name = "SearchEngineKeyword",
-value = "_FUNC_(iplong) - returns keyword part from a search engine referrer URL",
-extended = "Example:\n"
-+ " > SELECT _FUNC_(\"http://www.google.com/search?q=keyword+keyword\") FROM table"
-+ " > keyword keyword")
+        value = "_FUNC_(iplong) - returns keyword part from a search engine referrer URL",
+        extended = "Example:\n"
+                        + " > SELECT _FUNC_(\"http://www.google.com/search?q=keyword+keyword\") FROM table"
+                        + " > keyword keyword")
 public class SearchEngineKeyword extends GenericUDF {
 
         private ObjectInspectorConverters.Converter converter;
@@ -102,7 +101,7 @@ public class SearchEngineKeyword extends GenericUDF {
          */
         @Override
         public String getDisplayString(String[] strings) {
-                assert (strings.length == 1);
+
                 return "_FUNC_(" + strings[0] + ")";
         }
 }

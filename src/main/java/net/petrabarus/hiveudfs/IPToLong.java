@@ -37,7 +37,7 @@ public class IPToLong extends GenericUDF {
                 }
                 if(((PrimitiveObjectInspector)arguments[0]).getPrimitiveCategory() != PrimitiveObjectInspector.PrimitiveCategory.STRING){
                         throw new UDFArgumentTypeException(0,"throw new UDFArgumentTypeException(0,\n" +
-                                "                                \"A string argument was expected but an argument of type \" + argument.getTypeName()\n" +
+                                "                                \"A string argument was expected but an argument of type "+ arguments[0].getTypeName() +
                                 "                                + \" was given.\");");
                 }
 
